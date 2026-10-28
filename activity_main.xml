@@ -1,0 +1,188 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#10111F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CINEMA CLUB"
+            android:textColor="#B7A4FF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Movie&#10;Watchlist"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your next favorite movie starts here."
+            android:textColor="#A3A5BC"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Movie Form Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="#1C1E32">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD A MOVIE"
+                android:textColor="#D1C5FF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Movie title"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8588A3"
+                android:textSize="15sp"
+                android:backgroundTint="#8B75F5"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etGenre"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Genre (e.g. Action)"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8588A3"
+                android:textSize="15sp"
+                android:backgroundTint="#8B75F5"
+                android:layout_marginBottom="18dp" />
+
+            <Button
+                android:id="@+id/bAdd"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Add Movie"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#7957E8"
+                android:onClick="addMovie" />
+
+            <Button
+                android:id="@+id/bWatched"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:text="Mark as Watched"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#D7D0FF"
+                android:backgroundTint="#34304F"
+                android:onClick="markWatched" />
+
+            <Button
+                android:id="@+id/bDelete"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:text="Delete Movie"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#FFB9C1"
+                android:backgroundTint="#482735"
+                android:onClick="deleteMovie" />
+
+        </LinearLayout>
+
+        <!-- Movie List Heading -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="YOUR COLLECTION"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WATCHLIST"
+                android:textColor="#B7A4FF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="#292440" />
+
+        </LinearLayout>
+
+        <!-- Movie List -->
+        <TextView
+            android:id="@+id/tMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1C1E32"
+            android:padding="18dp"
+            android:text="Your watchlist is empty. Add a movie!"
+            android:textColor="#E8E8F2"
+            android:textSize="15sp"
+            android:lineSpacingExtra="6dp"
+            android:fontFamily="sans"
+            android:elevation="2dp" />
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Made for movie lovers"
+            android:textColor="#777A96"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>
